@@ -1,0 +1,24 @@
+
+<div class="row">
+  <div class="col-md-8">
+    <h3>HotelData</h3>
+    <hr />
+    <br />
+    <form #form="ngForm" (ngSubmit)="onSubmit()" >
+      <div class="form-group">
+        <label for="name">HotelName</label>
+        <input type="text" class="form-control" id="name" placeholder="enter Hotel name" [(ngModel)]="hotel.hotelName" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="address">HotelAddress</label>
+        <input type="text" class="form-control" id="address" placeholder="enter Hotel address" [(ngModel)]="hotel.hotelAddress" name="address" required>
+      </div>
+      <div class="form-group">
+        <label for="numofrooms">Number Of Rooms</label>
+        <input type="text" class="form-control" id="numofrooms" placeholder="enter number of rooms" [(ngModel)]="hotel.numOfRooms" name="rooms" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Add Hotel</button>
+    </form>
+  </div>
+</div>
