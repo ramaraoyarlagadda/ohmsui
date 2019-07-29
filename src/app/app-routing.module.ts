@@ -13,6 +13,14 @@ const routes: Routes = [
     loadChildren: () => import('./deleting/deleting.module').then(mod => mod.DeletingModule)
   },
   {
+    path: 'viewing',
+    loadChildren: () => import('./viewing/viewing.module').then(mod => mod.ViewingModule)
+  },
+  {
+    path: 'modifing',
+    loadChildren: () => import('./modifing/modifing.module').then(mod => mod.ModifingModule)
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'

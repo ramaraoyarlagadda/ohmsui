@@ -1,10 +1,10 @@
 
-<div class="row">
+<div class="container" >
   <div class="col-md-8">
-    <h3>HotelData</h3>
+    <div>Enter HotelDetails For AddingHotel</div>
     <hr />
     <br />
-    <form #form="ngForm" (ngSubmit)="onSubmit()" >
+    <form  (ngSubmit)="onSubmit()" >
       <div class="form-group">
         <label for="name">HotelName</label>
         <input type="text" class="form-control" id="name" placeholder="enter Hotel name" [(ngModel)]="hotel.hotelName" name="name" required>
@@ -15,10 +15,10 @@
       </div>
       <div class="form-group">
         <label for="numofrooms">Number Of Rooms</label>
-        <input type="text" class="form-control" id="numofrooms" placeholder="enter number of rooms" [(ngModel)]="hotel.numOfRooms" name="rooms" required>
+        <input type="number" class="form-control" id="numofrooms" placeholder="enter number of rooms" [(ngModel)]="hotel.numOfRooms" name="rooms" required>
       </div>
 
-      <button type="submit" class="btn btn-primary">Add Hotel</button>
+      <button type="submit" class="btn btn-outline-success">Add Hotel</button>
     </form>
   </div>
 </div>

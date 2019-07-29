@@ -1,13 +1,28 @@
-<p>viewing works!</p>
-<p>deleting works!</p>
 
+<div class="container">
 <form  >
-    <!-- (ngSubmit)="onSubmit()" -->
-
-  <div class="form-group">
+  <div>
     <label for="hotelid">HotelId</label>
-    <input type="number" class="form-control" id="hotelid" placeholder="Enter hotelid for deletion"  name="rooms" required>
-  </div>
+    <input type="number" class="form-control" id="hotelid"
+     placeholder="Enter hotelid for deletion" [(ngModel)]="views.hotelId"  name="viewing" required>
+  <button type="submit"  (click)="onView()" class="btn btn-outline-info">ViewHotel</button>
+  <table>
+    <thead>
+    <th>HotelId</th>
+    <th>HotelName</th>
+    <th>HotelAddress</th>
+    <th>Number Of Rooms</th>
+  </thead>
+  <tbody>
+    <td>{{views.hotelId}}</td>
+    <td>{{views.hotelName}}</td>
+    <td>{{views.hotelAddress}}</td>
+    <td>{{views.numOfRooms}}</td>
+  </tbody>
 
-  <button type="submit" class="btn btn-primary">Deletehotel</button>
+  </table>
+</div>
 </form>
+</div>
+
+

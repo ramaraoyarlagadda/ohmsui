@@ -9,7 +9,8 @@ import { Deletion } from './data/Delete';
 export class DeletingService {
   private headers = new HttpHeaders({ 'Content-Type': 'application/json' });
   constructor(private http: HttpClient) { }
-  // deleteHotel(deletion: Deletion): Observable< any > {
-  //   return this.http.delete('http://localhost:8086/delete', deletion);
-  // }
+  deleteHotel(deletion: Deletion): Observable< any > {
+    console.log('indeletionservice ');
+    return this.http.post('http://localhost:8086/delete', deletion , { headers: this.headers });
+  }
 }

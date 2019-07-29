@@ -14,17 +14,17 @@ deleted: Deletion = { hotelId : 0 };
 
   constructor(private deletionService: DeletingService) { }
   onDelete() {
-    // this.deletionService.deleteHotel(this.deleted).subscribe(
-    //   value => {
-    //     console.log('Hotel deleted successfully', value);
-    //     alert('hotel deleted successfully');
-    //   },
-    //   error => {
-    //     console.log('FAIL to delete hotel!');
-    //   },
-    //   () => {
-    //     console.log('deletion of hotel deleted');
-    //   });
+    this.deletionService.deleteHotel(this.deleted).subscribe(
+      value => {
+        console.log('Hotel deleted successfully', value);
+        alert('hotel deleted successfully');
+      },
+      error => {
+        console.log('FAIL to delete hotel!');
+      },
+      () => {
+        console.log('deletion of hotel deleted');
+      });
 
   }
 

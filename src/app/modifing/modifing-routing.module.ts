@@ -8,6 +8,11 @@ const routes: Routes = [
     path: '',
     component: ModifingComponent
   }
+  // {
+  //   path: '**',
+  //   component: ModifingComponent
+  // }
+
 ];
 
 @NgModule({

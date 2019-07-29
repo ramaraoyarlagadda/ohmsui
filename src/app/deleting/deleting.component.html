@@ -1,12 +1,12 @@
-<p>deleting works!</p>
-
+<div class="container">
 <form  >
     <!-- (ngSubmit)="onSubmit()" -->
 
-  <div class="form-group"(ngSubmit)="onDelete()">
+  <div class="form-group" >
     <label for="hotelid">HotelId</label>
-    <input type="number" class="form-control" id="hotelid" placeholder="Enter hotelid for deletion" [(ngModel)]="deleted.hotelId" name="rooms" required>
-  </div>
-
-  <button type="submit" class="btn btn-primary">Deletehotel</button>
+    <input type="number" class="form-control" id="hotelid" placeholder="Enter hotelid for deletion"
+     [(ngModel)]="deleted.hotelId" name="hotelId" required>
+  <button type="submit" (click)="onDelete()" class="btn btn-outline-dark">Deletehotel</button>
+</div>
 </form>
+</div>
